@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maidy Birthday</title>
+
+    <link rel="stylesheet" href="asset/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="asset/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  height: 100dvh;
+  background-image: url("asset/img/asasdasdasdlasdlmasd.jpg");
+  background-repeat: no-repeat;
+  /* width: 100%; */
+  background-position: center;
+  background-size: cover;
+  font-family: "Pixelify Sans";
+}
+h1 {
+  font-size: 20rem;
+}
+.main-wrapper {
+  height: 100%;
+  /* backgr
+        ound-color: aqua; */
+}
+
+.card,
+.card-body input,
+.card-body textarea {
+  border: 2px solid white;
+}
+.card-body input,
+.card-body textarea {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.card .card-header,
+.card .card-body,
+.card .card-footer,
+.card-body * {
+  /* border: 2px solid white;
+        border-color: rgb(255, 255, 255); */
+  border: none;
+  background-color: rgba(red, green, blue, 0);
+}
+
+.card-footer button {
+  border: 2px solid white;
+}
+
+footer p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea {
+  height: 100px !important;
+}
+
+img {
+  width: 240px;
+}
+
+    </style>
+  </head>
+  <body>
+    <div
+      class="main-wrapper d-flex flex-column justify-content-center align-items-center"
+    >
+      <h1 class="text-center text-white h1">Hi!😺 Today is my B-day</h1>
+      <div class="container col-lg-4 col-md-8 col-12">
+        <!-- form -->
+        <form action="" method="post" id="form">
+          <div class="card bg-transparent">
+            <div class="card-header text-white" id="card-header">
+              <h1 class="h3 mb-3 fw-normal text-center">
+                Please leave message for me
+              </h1>
+            </div>
+            <div class="card-body" id="card-body">
+              <!-- nama -->
+              <div class="form-floating mb-5 mt-2 text-white">
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control bg-transparent text-white"
+                  id="floatingInput"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInput">Your Name</label>
+              </div>
+              <!-- pesan -->
+              <div class="form-floating mb-4 text-white">
+                <textarea
+                  class="form-control bg-transparent text-white"
+                  placeholder="Leave a comment here"
+                  id="floatingTextarea2"
+                  style="height: 100px"
+                  name="message"
+                ></textarea>
+                <label for="floatingTextarea2">Your Message</label>
+              </div>
+            </div>
+            <div class="card-footer text-end" id="card-footer">
+              <button
+                class="btn btn-transparent py-2 text-white"
+                type="submit"
+                id="button"
+              >
+                Message
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer class="text-center bg-transparent text-white">
+      <p class="mt-5 mb-3">
+        &copy;may_day112
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+      </p>
+    </footer>
+  </body>
+  <script src="asset/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+  <script src="asset/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/combine/gh/dylanNew/live2d/webgl/Live2D/lib/live2d.min.js,npm/pixi.js@6.5.2/dist/browser/pixi.min.js,npm/pixi-live2d-display/dist/index.min.js,gh/Weidows-projects/Live2dLoader/dist/Live2dLoader.min.js"></script>
+  <script>
+    addEventListener("DOMContentLoaded", function () {
+      new Live2dLoader([
+        {
+          width: window.innerWidth,
+          height: window.innerHeight,
+          left: "0px",
+          bottom: "0px",
+          role: "https://model.zulma.id/assets/models/ReZero/rem_1/rem.json",
+          opacity: 1,
+          scale: 0.2,
+          mobile: true,
+          draggable: true,
+        }
+      ]);
+    });
+  </script> -->
+  <script>
+    window.addEventListener("load", function () {
+      const form = document.getElementById("form");
+      const cardHeader = document.getElementById("card-header");
+      const cardBody = document.getElementById("card-body");
+      const cardFooter = document.getElementById("card-footer");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        const action = e.target.action;
+
+        fetch(action, {
+          method: "POST",
+          data: data,
+        }).then(function () {
+          cardHeader.style.visibility = "hidden";
+          cardBody.innerHTML = '<img src="asset/img/the cat 1.png" />';
+          cardBody.classList.toggle("text-center");
+          cardFooter.innerHTML = '<h4 class="text-white">Thank You!</h4>';
+          cardFooter.classList.toggle("text-end");
+          cardFooter.classList.toggle("text-center");
+        });
+      });
+    });
+  </script>
+</html>

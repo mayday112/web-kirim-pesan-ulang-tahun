@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  height: 100dvh;
+  background-image: url("asset/img/asasdasdasdlasdlmasd.jpg");
+  background-repeat: no-repeat;
+  /* width: 100%; */
+  background-position: center;
+  background-size: cover;
+  font-family: "Pixelify Sans";
+}
+h1 {
+  font-size: 20rem;
+}
+.main-wrapper {
+  height: 100%;
+  /* backgr
+        ound-color: aqua; */
+}
+
+.card,
+.card-body input,
+.card-body textarea {
+  border: 2px solid white;
+}
+.card-body input,
+.card-body textarea {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.card .card-header,
+.card .card-body,
+.card .card-footer,
+.card-body * {
+  /* border: 2px solid white;
+        border-color: rgb(255, 255, 255); */
+  border: none;
+  background-color: rgba(red, green, blue, 0);
+}
+
+.card-footer button {
+  border: 2px solid white;
+}
+
+footer p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea {
+  height: 100px !important;
+}
+
+img {
+  width: 240px;
+}
