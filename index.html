@@ -16,18 +16,16 @@ body {
   height: 100dvh;
   background-image: url("asset/img/asasdasdasdlasdlmasd.jpg");
   background-repeat: no-repeat;
-  /* width: 100%; */
   background-position: center;
   background-size: cover;
   font-family: "Pixelify Sans";
+  overflow: hidden;
 }
 h1 {
   font-size: 20rem;
 }
 .main-wrapper {
   height: 100%;
-  /* backgr
-        ound-color: aqua; */
 }
 
 .card,
@@ -74,7 +72,7 @@ img {
       <h1 class="text-center text-white h1">Hi!😺 Today is my B-day</h1>
       <div class="container col-lg-4 col-md-8 col-12">
         <!-- form -->
-        <form action="" method="post" id="form">
+        <form action="https://script.google.com/macros/s/AKfycbztzqKyQOMy2PrSVcRuzLFcHMw5T_w7V8-Z1ylnesI76ImNPysnaf7NblBmZvuVCJ2I/exec" method="post" id="form">
           <div class="card bg-transparent">
             <div class="card-header text-white" id="card-header">
               <h1 class="h3 mb-3 fw-normal text-center">
@@ -89,7 +87,7 @@ img {
                   name="name"
                   class="form-control bg-transparent text-white"
                   id="floatingInput"
-                  placeholder="name@example.com"
+                  placeholder=""
                 />
                 <label for="floatingInput">Your Name</label>
               </div>
@@ -119,8 +117,8 @@ img {
       </div>
     </div>
     <!-- footer -->
-    <footer class="text-center bg-transparent text-white">
-      <p class="mt-5 mb-3">
+    <footer class="text-center bg-transparent text-white p-3">
+      <p class="">
         &copy;may_day112
         <script>
           document.write(new Date().getFullYear());
@@ -151,6 +149,9 @@ img {
   </script> -->
   <script>
     window.addEventListener("load", function () {
+
+      window.scrollX
+
       const form = document.getElementById("form");
       const cardHeader = document.getElementById("card-header");
       const cardBody = document.getElementById("card-body");
@@ -168,7 +169,7 @@ img {
           cardHeader.style.visibility = "hidden";
           cardBody.innerHTML = '<img src="asset/img/the cat 1.png" />';
           cardBody.classList.toggle("text-center");
-          cardFooter.innerHTML = '<h4 class="text-white">Thank You!</h4>';
+          cardFooter.innerHTML = '<h4 class="text-white" alt="The cat">Thank You!</h4>';
           cardFooter.classList.toggle("text-end");
           cardFooter.classList.toggle("text-center");
         });
