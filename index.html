@@ -158,6 +158,10 @@ img {
       form.addEventListener("submit", function (e) {
         e.preventDefault()
 
+        cardFooter.classList.toggle("text-end");
+        cardFooter.classList.toggle("text-center");
+        cardFooter.innerHTML = '<h4 class="text-white" >Wait....</h4>';
+
         fetch(e.target.action, {
           method: "POST",
           body: new FormData(form),
@@ -167,8 +171,7 @@ img {
           cardBody.innerHTML = '<img src="asset/img/the cat 1.png" alt="The cat" />';
           cardBody.classList.toggle("text-center");
           cardFooter.innerHTML = '<h4 class="text-white" >Thank You!</h4>';
-          cardFooter.classList.toggle("text-end");
-          cardFooter.classList.toggle("text-center");
+         
         });
 
       });
